@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transaction proses</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use daisyUI from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+    <main class="flex justify-center p-4">
+        <div class="mockup-phone border-primary ">
+            <div class="display">
+              <div class="artboard artboard-demo phone-1">
+                <div class="mb-3">
+                    <div class="stats shadow pt-4">
+                        <div class="stat ">
+                          <div id="mainBalance" class="stat-value">89400</div>
+                          <div class="stat-desc">Available Balance</div>
+                        </div>
+                      </div>
+                </div>
+               <div>
+                <button id="addMoney-showSection" class="btn btn-lg">Add money</button>
+                <button id="cashOut-showSection" class="btn btn-lg">Cash Out</button>
+                <div class="flex justify-center mt-2">
+                  <button id="transaction-showSection" class="btn btn-lg">transaction</button>
+                </div>
+               </div>
+               <div class="divider"></div>
+                <!-- Add Money start -->
+                <div id="addMoney-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Add Money</span>
+                        </label>
+                        <input id="addMoney" type="text" placeholder="Add Money Amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input id="addMoneyPin" type="password" placeholder="Your Pin" class="input input-bordered" autocomplete="off" />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="addMoneyBtn" class="btn btn-primary">Add Money</button>
+                      </div>
+                    </form>
+                  </div>
+                <!-- Add Money  end -->
+                 <!-- cash out start-->
+                 <div id="cashOut-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Cash Out</span>
+                        </label>
+                        <input id="CashOutAmount" type="text" placeholder="cash Out Amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input id="CashOutPin" type="password" placeholder="Your Pin" class="input input-bordered" autocomplete="off" />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="CashOutBtn" class="btn btn-primary">Cash Out</button>
+                      </div>
+                    </form>
+                  </div>
+                 <!-- cash out end -->
+                <!-- transaction section -->
+                 <div id="Transaction-section" class="text-center space-y-3">
+                  <h2 class="text-lg font-semibold">Transaction History</h2>
+                <div id="transaction-history">
+
+                </div>
+                 </div>
+                <!-- transaction section -->
+
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="./js/hoom.js"></script>
+   <script src="./js/fung.js"></script>
+    
+</body>
+</html>
